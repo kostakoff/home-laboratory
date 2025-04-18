@@ -14,5 +14,5 @@ variable "admin_password" {
 }
 
 variable "blobstore" {
-  default = "default"
+  default = "s3qnap"
 }
