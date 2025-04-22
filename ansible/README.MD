@@ -6,7 +6,7 @@ described here https://web.archive.org/web/20240331135623/https://books.stuarthe
 
 - Installation, repare, update server:
 ```bash
-ansible-playbook -vvv playbooks/all.yaml -i inventory/hosts.yaml --tags sonar-cli
+ansible-playbook -vvv playbooks/all.yaml -i inventory/hosts.yaml --tags linux-sonar-cli
 ```
 
 # Ansible pipeline steps
