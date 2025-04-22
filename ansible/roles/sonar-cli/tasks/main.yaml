@@ -1,0 +1,37 @@
+- name: Remove sonar directory
+  become: yes
+  ansible.builtin.file:
+    path: /opt/sonar
+    state: absent
+
+- name: Create sonar directory
+  become: yes
+  ansible.builtin.file:
+    path: "{{ item }}"
+    state: directory
+  with_items:
+    - "/opt/sonar/"
+    - "/opt/sonar/sonar-scanner-cli"
+    - "/opt/sonar/sonar-scanner-net"
+    - "/opt/sonar/sonar-scanner-net-framework"
+
+- name: Download and extract general sonar scanner
+  become: true
+  ansible.builtin.unarchive:
+    remote_src: true #important!
+    src: "{{ sonar_scanner_url }}"
+    dest: /opt/sonar/sonar-scanner-cli
+
+- name: Download and extract sonar scanner net
+  become: true
+  ansible.builtin.unarchive:
+    remote_src: true #important!
+    src: "{{ sonar_scanner_net_url }}"
+    dest: /opt/sonar/sonar-scanner-net
+
+- name: Download and extract sonar scanner net framework
+  become: true
+  ansible.builtin.unarchive:
+    remote_src: true #important!
+    src: "{{ sonar_scanner_net_framework_url }}"
+    dest: /opt/sonar/sonar-scanner-net-framework

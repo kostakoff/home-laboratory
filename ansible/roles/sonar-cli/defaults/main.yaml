@@ -1,0 +1,6 @@
+# general sonar scanner
+sonar_scanner_url: http://nexus.local/repository/maven-central/org/sonarsource/scanner/cli/sonar-scanner-cli/6.2.1.4610/sonar-scanner-cli-6.2.1.4610-linux-x64.zip
+# sonar scanner for dotnet
+sonar_scanner_net_url: http://nexus.local/repository/github/SonarSource/sonar-scanner-msbuild/releases/download/10.1.2.114627/sonar-scanner-10.1.2.114627-net.zip
+# sonar scanner for msbuild
+sonar_scanner_net_framework_url: http://nexus.local/repository/github/SonarSource/sonar-scanner-msbuild/releases/download/10.1.2.114627/sonar-scanner-10.1.2.114627-net-framework.zip

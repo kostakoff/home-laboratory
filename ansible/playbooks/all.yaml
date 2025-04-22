@@ -1,0 +1,7 @@
+---
+- hosts: linux_rinners
+  roles:
+  - role: sonar-cli
+    tags: 
+      - sonar-cli
+      - never
