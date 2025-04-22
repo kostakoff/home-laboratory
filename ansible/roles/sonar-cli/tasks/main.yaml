@@ -35,3 +35,11 @@
     remote_src: true #important!
     src: "{{ sonar_scanner_net_framework_url }}"
     dest: /opt/sonar/sonar-scanner-net-framework
+
+- name: Fix sonar directory permissions
+  become: yes
+  ansible.builtin.file:
+    path: /opt/sonar
+    state: directory
+    recurse: true
+    mode: "o+rx"
