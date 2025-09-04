@@ -1,5 +1,5 @@
 variable "nexus_url" {
-  default = "http://nexus.local"
+  default = "http://nexus.lab.devltd.net"
   ephemeral = true
 }
 
